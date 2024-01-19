@@ -1,21 +1,35 @@
-// Lab1P3_DiegoLara.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
-
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
-    std::cout << "Primer Commit\n";
+	bool menu = true;
+	while (menu) {
+		int opcion = 0;
+		cout << "Ejercicio Práctico 1 – Viva Programar" << endl;
+		cout << "Ejercicio práctico 2 – Sumatoria" << endl;
+		cout << "3. Salir" << endl;
+		cin >> opcion;
+
+		switch (opcion)		{
+		case 1: 
+			int numIngresado;
+			cout << "Numero Ingresado: "; cin >> numIngresado;
+			if (numIngresado < 0){
+				cout << "Favor escribir un numero mayor o igual que 0"; cin >> numIngresado;
+			}
+			if (numIngresado % 3 == 0){
+				cout << "Salida:" << " Viva " << endl;
+			} else if (numIngresado % 5 == 0) {
+				cout << "Salida:" << " Programar " << endl;
+			}
+			
+			break;
+		case 2: 
+			break;
+		case 3:
+			menu = false;
+			break;
+		default: cout << "Opcion Invalida" << endl;
+		}
+   }
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
